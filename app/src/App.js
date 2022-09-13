@@ -1,13 +1,20 @@
-import React from 'react';
-import './App.css';
-import Header from './Home/header';
-import Banner from './Home/banner'
+import Home from "./views/home";
+import Register from "./views/register"
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 const App = () => {
   return (
-    <div className="App">
-      <Header />
-      <Banner />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/cadastro" element={<Register />}></Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

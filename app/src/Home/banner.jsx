@@ -1,6 +1,7 @@
-import "../App.css";
+import "./home.css";
 import arrow from "../static/arrow-icon.svg"
 import Button from "../generic/button"
+import { Link } from "react-router-dom";
 const Banner = () => {
     return(
         <>
@@ -13,7 +14,7 @@ const Banner = () => {
             </div>
             <img className="banner-arrow-icon" src={arrow} alt="arrow" />
             <div className="banner-register-button">
-                <Button>Cadastre-se</Button>
+                <Button><Link to={"cadastro"}><span className="register-redirect-button">Cadastre-se</span></Link></Button>
             </div>
         </div>
         </>
