@@ -3,3 +3,48 @@
     place-items: center;
     width: 100%;
 }
+
+.register-box {
+    width: 25%;
+    background-color: rgb(44, 44, 44);
+    border: 1px solid rgb(233, 135, 15);
+    padding: 2vw;
+    min-height: 3em;
+    margin: 4em;
+}
+
+.register-box-form {
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+    'name name name name'
+    'age cpf cpf cpf'
+    'email email emailConfirm emailConfirm'
+    ;
+    
+    gap: 1vw;
+}
+
+.register-box-form-name {
+    grid-area: name;
+}
+.register-box-form-age {
+    grid-area: age;
+}
+.register-box-form-cpf {
+    grid-area: cpf;
+}
+.register-box-form-email {
+    grid-area: email;
+}
+.register-box-form-emailConfirm {
+    grid-area: emailConfirm;
+}
+.register-box-form input {
+    width: auto;
+    min-width: 2rem;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    padding: 0.5vw;
+}
