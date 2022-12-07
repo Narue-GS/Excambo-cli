@@ -1,20 +1,9 @@
 import "../../styles/home.css";
 import arrow from "../../static/arrow-icon.svg"
 
-const Banner = () => {
-    const getFromBackend = async() =>{
-	await fetch("http://127.0.0.1:5000/get_all_users",{
-            method: "GET",
-            mode:'cors',
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Content-type':'application/json',
-            },
-        })
-        .then((res) => res.json())
-        .then((data) => (console.log(data)))
-    }
+import { Link } from "react-router-dom";
 
+const Banner = () => {
     return(
         <>
         <div className="banner-box">
@@ -25,8 +14,8 @@ const Banner = () => {
                 </span>
             </div>
             <img className="banner-arrow-icon" src={arrow} alt="arrow" />
-            <div className="banner-register-button">
-                <button onClick={getFromBackend} className="register-button">Junte-se</button>
+	     <div className="banner-register-button">
+                <Link to={"register"}><button className="register-button">Cadastre-se</button></Link>
             </div>
         </div>
         </>

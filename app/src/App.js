@@ -1,11 +1,23 @@
 import React from 'react';
-import './App.css';
-import Home from "./pages/home.jsx"
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+
+import Home from "./pages/home.jsx";
+import Register from "./pages/register.jsx";
+
 const App = () => {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+	  <Route path="/register" element={<Register />}></Route>
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

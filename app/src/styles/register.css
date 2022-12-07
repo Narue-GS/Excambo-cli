@@ -1,10 +1,13 @@
+input {	
+    font-size: clamp(0.5em, 1.5vw, 5em);
+}
 .register {
     display: grid;
     place-items: center;
     width: 100%;
 }
 .register-box {
-    width: 35%;
+    width: 50%;
     background-color: rgba(44, 44, 44,0.5);
     border: 1px solid rgb(233, 135, 15);
     padding: 2vw;
@@ -24,7 +27,7 @@
    grid-row-end: 1;
 }
 
-.register-box-form-age {
+.register-box-form-birth {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 2;
